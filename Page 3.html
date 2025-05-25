@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Page 2 - Heartfelt Expression</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #d6c4f5; /* light purple */
+    color: #4a148c;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+  /* Lilly emoji border top & bottom */
+  body::before, body::after {
+    content: "🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸";
+    position: fixed;
+    left: 0; right: 0;
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 1rem;
+    color: #a569bd;
+    user-select: none;
+    z-index: 10;
+  }
+  body::before { top: 0; }
+  body::after { bottom: 0; }
+
+  .container {
+    max-width: 720px;
+    margin: 60px auto 80px auto;
+    padding: 30px 40px;
+    background: #f3e5f5cc; /* translucent lighter purple */
+    border-radius: 15px;
+    box-shadow: 0 0 20px #7b1fa2aa;
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #6a1b9a;
+  }
+
+  /* Heart shape container for 3 pics and texts */
+  .heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 40px auto;
+  }
+
+  .heart-piece {
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+  }
+  .heart-piece img {
+    width: 140px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #7b1fa2aa;
+  }
+  .heart-piece .caption {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.3rem;
+    color: #7b1fa2;
+    margin-top: 10px;
+  }
+
+  /* Columns below for 2 night scenery pics left and right */
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .column {
+    width: 45%;
+  }
+  .column img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #7b1fa2aa;
+  }
+
+  /* Center bending rose pic with text below */
+  .center-rose {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .center-rose img {
+    width: 220px;
+    border-radius: 30px;
+    box-shadow: 0 5px 18px #7b1fa2aa;
+  }
+  .center-rose p {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.7rem;
+    color: #9c27b0;
+    margin-top: 15px;
+  }
+
+  /* Radio buttons with Yes / No / Think */
+  form {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.6rem;
+    color: #7b1fa2;
+  }
+  label {
+    margin: 0 18px;
+    cursor: pointer;
+  }
+  input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Still reading all this ? You are so lovely  💜</h1>
+
+  <div class="heart-container">
+    <div class="heart-piece">
+      <img src="C:\Users\Shreyas Gautam\Desktop\For her\foggy.png" alt="Roblox Pic 1" />
+      <div class="caption">The sun is shining bright even in this fog, just like how your gorgeous eyes looks as pretty as the first time I fell in likeness for them and you </div>
+    </div>
+    <div class="heart-piece">
+      <img src="C:\Users\Shreyas Gautam\Desktop\For her\7.png" alt="Roblox Pic 2" />
+      <div class="caption">Having you beside me while looking at the well lit sunny sky sounds as perfect as the feel of your hands touching my arms and your lips giving me all the sweet kisses which they can</div>
+    </div>
+    <div class="heart-piece">
+      <img src="C:\Users\Shreyas Gautam\Desktop\For her\birds.png" alt="Roblox Pic 3" />
+      <div class="caption">The birds forming that gorgeous formation just the way your wavy hair makes while my fingers run through them, pushing them behind your ears so that I get to whisper to you and say how gorgeous you look while my eyes look at your lips smiling while you hear me praise you as you deserve to </div>
+    </div>
+  </div>
+
+  
+
+  <div class="center-rose">
+    <img src="C:\Users\Shreyas Gautam\Desktop\For her\rose(bend down).png" alt="Bending Rose" />
+    <p>So miss gorgeous, will you like to be my pretty woman and I mean my pretty woman who is my girlfriend ? I assure you an upgraded and loving experience </p>
+  </div>
+
+  <form id="decisionForm">
+    <label><input type="radio" name="decision" value="yes" /> Yes</label>
+    <label><input type="radio" name="decision" value="no" /> No</label>
+    <label><input type="radio" name="decision" value="think" /> Think</label>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('decisionForm');
+  form.addEventListener('change', e => {
+    if(e.target.value === 'yes') {
+      alert('You chose Yes! Redirecting to the next surprise...');
+      window.location.href = 'Page 4.html';
+    } else if(e.target.value === 'no') {
+      alert('Oh no! Maybe next time. Sending you my best wishes.');
+      
+    } else if(e.target.value === 'think') {
+      alert('Take your time. I will be here waiting patiently.');
+      // Could add some other logic if needed
+    }
+  });
+</script>
+
+</body>
+</html>

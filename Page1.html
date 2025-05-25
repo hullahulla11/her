@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ask Her Out</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet" />
+<style>
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #e8d7f5; /* light purple */
+    color: #4a148c; /* deep purple */
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+  /* Lilly emoji border top & bottom */
+  body::before, body::after {
+    content: "🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸";
+    position: fixed;
+    left: 0; right: 0;
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 1rem;
+    color: #a569bd;
+    user-select: none;
+    z-index: 10;
+  }
+  body::before { top: 0; }
+  body::after { bottom: 0; }
+
+  .container {
+    max-width: 600px;
+    margin: 60px auto 80px auto;
+    padding: 30px 40px;
+    background: #f3e5f5cc; /* translucent lighter purple */
+    border-radius: 15px;
+    box-shadow: 0 0 20px #7b1fa2aa; /* purple shadow */
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #6a1b9a;
+  }
+
+  label {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.6rem;
+    margin: 0 20px;
+    color: #7b1fa2;
+    cursor: pointer;
+  }
+
+  .message {
+    margin-top: 30px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+    color: #9c27b0;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Hello Good Morning/Afternoon/Evening Miss Gorgeous</h1>
+  
+  <form id="likeForm">
+    <p style="font-size: 1.5rem; margin-bottom: 25px;">Wassup Miss Srimayee. Ik the previous convos which we had weren't great. However I hope your smile is back and you read what I have to say. I hope you do so.</p>
+    <p style="font-size: 1.5rem; margin-bottom: 25px;">Do you like me?</p>
+    <label><input type="radio" name="like" value="yes" /> Yes</label>
+    <label><input type="radio" name="like" value="no" /> No</label>
+  </form>
+
+  <div id="noMessage" class="message">
+    Oh, I wish you all the best and always know,<br />
+    you are the most gorgeous woman my lips have loved to make smile. I am greatfull for all the moments we had, the kiss would still be sweeter than any sweet I eat ever. Keep smiling as you look the best when you do so and as always I am there whenever you need me. 
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('likeForm');
+  const noMessage = document.getElementById('noMessage');
+
+  form.addEventListener('change', e => {
+    if(e.target.value === 'no') {
+      noMessage.style.display = 'block';
+    } else {
+      noMessage.style.display = 'none';
+      // if yes clicked, redirect to page1
+      if(e.target.value === 'yes') {
+        window.location.href = 'Page 2.html';
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
